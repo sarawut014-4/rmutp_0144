@@ -8,6 +8,8 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - ./data:/var/lib/postgressql/data
 
   app:
     image: prawee/strapi
@@ -22,3 +24,4 @@ services:
         DATABASE_USERNAME: ${DATABASE_USERNAME}
         DATABASE_PASSWORD: ${DATABASE_PASSWORD}
         DATABASE_SSL: false
+    
