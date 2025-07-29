@@ -1,5 +1,6 @@
 # API
 @password={$env PASSWORD}
+@userId=11  #
 ### Getting all user
 
 GET http://localhost:8080/api/users
@@ -13,3 +14,14 @@ Content-Type: application/json
    "username": "sarawut",
    "password": "{{password}}"
 }
+### Update a user by ID
+PUT http://localhost:8080/api/users/{{userId}}
+Content-Type: application/json
+
+    {
+      "username": "leon",
+      "email": "sarawut-new@rmutp.ac.th"
+    }
+
+### Delete user by ID
+DELETE http://localhost:8080/api/users/{{userId}}
