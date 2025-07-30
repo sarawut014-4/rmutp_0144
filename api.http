@@ -1,6 +1,6 @@
 # API
 @password={$env PASSWORD}
-@userId=11  #
+@userId=17  #
 ### Getting all user
 
 GET http://localhost:8080/api/users
